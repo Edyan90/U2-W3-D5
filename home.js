@@ -30,13 +30,13 @@ fetch(URL, {
 
       const small = document.createElement("small");
 
-      col.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-4", "col-xl-4", "col-xxl-3");
+      col.classList.add("col-12", "col-sm-12", "col-md-4", "col-lg-4", "col-xl-4", "col-xxl-3");
       card.classList.add("card", "mb-4", "shadow-sm", "h-100");
       img.classList.add("card-img-top", "bd-placeholder-img", "object-fit-contain");
       cardBody.classList.add("card-body", "d-flex", "flex-column", "justify-content-around");
       title.classList.add("card-title");
       text.classList.add("card-text");
-      divButtonsFlex.classList.add("d-flex", "justify-content-between", "align-items-center");
+      divButtonsFlex.classList.add("d-flex", "justify-content-between", "align-items-center", "mt-auto");
       divButtons.classList.add("btn-group");
       buttonView.classList.add("btn", "btn-sm", "btn-outline-secondary");
 

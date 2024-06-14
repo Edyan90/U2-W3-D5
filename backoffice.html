@@ -75,16 +75,11 @@
               <input type="number" class="form-control" id="price" placeholder="price" min="0" required />
               <label for="price">Price</label>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm" id="create">Create Product</button>
-            <button
-              type="reset"
-              class="btn btn-secondary btn-sm"
-              id="reset"
-              onclick="return confirm(`Do you want reset the form?`)"
-            >
-              Reset
-            </button>
-            <button type="button" class="btn btn-danger btn-sm d-none" id="delete">Delete</button>
+            <div class="row">
+              <button type="button" class="col-2 mx-auto btn btn-secondary btn-sm" id="resetBtn">Reset</button>
+              <button type="button" class="col-2 mx-auto btn btn-danger btn-sm d-none" id="delete">Delete</button>
+              <button type="submit" class="col-2 mx-auto btn btn-primary btn-sm" id="create">Create</button>
+            </div>
           </form>
         </div>
       </section>

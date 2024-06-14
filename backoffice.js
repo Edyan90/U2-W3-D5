@@ -2,17 +2,16 @@ const API_KEY =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZmYxMTdjMjM5YzAwMTUyZjRiNmYiLCJpYXQiOjE3MTgzNTM2ODEsImV4cCI6MTcxOTU2MzI4MX0.HxbtsHIRZzTywQNmyERSUS_shUPpyog2m1MqD67j8DA";
 
 const id = new URLSearchParams(window.location.search).get("productId");
-console.log(id);
 
 const URL = id
   ? "https://striveschool-api.herokuapp.com/api/product/" + id
   : "https://striveschool-api.herokuapp.com/api/product/";
 const method = id ? "PUT" : "POST";
 
-const resetbtn = document.getElementById("reset");
+const resetbtn = document.getElementById("resetBtn");
 resetbtn.addEventListener("click", () => {
   console.log(searchForm);
-  searchForm.reset(); //non funziona why???
+  searchForm.reset();
 });
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -28,6 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
     subtitle.innerText = "—— Edit Product";
     submitBtn.innerText = "Edit";
     submitBtn.classList.add("btn-success");
+    resetbtn.classList.add("d-none");
 
     deleteBtn.classList.remove("d-none");
 
@@ -111,7 +111,7 @@ const handleSubmit = (event) => {
         alert(`Prodotto ${prodotto.brand} ${prodotto.name} SUCCESS EDIT!`);
       } else {
         alert(`Prodotto ${prodotto.brand} ${prodotto.name} CREATED!`);
-        event.target.reset(); //idem per questo non funziona!
+        event.target.reset();
       }
     })
     .catch((err) => console.log(err));
