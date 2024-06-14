@@ -28,9 +28,9 @@ window.addEventListener("DOMContentLoaded", function () {
       const description = document.createElement("p");
       const modifica = document.createElement("a");
 
-      col.className = "col";
+      col.className = "col text-white";
       img.className = "object-fit-cover my-3 w-50";
-      price.className = "text-primary fs-3 fw-bold";
+      price.className = "text-primary fs-3 fw-bold text-white";
       description.className = " fs-5 fw-bold";
       modifica.className = "btn  btn-success fs-5 my-3";
 

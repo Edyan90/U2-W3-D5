@@ -53,7 +53,7 @@ fetch(URL, {
         window.location.assign("./backoffice.html?productId=" + smartphone._id);
       });
 
-      small.innerText = `${smartphone.price}€`;
+      small.innerText = `${smartphone.price} €`;
 
       cardBody.appendChild(title);
       cardBody.appendChild(text);
