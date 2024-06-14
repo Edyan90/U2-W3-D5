@@ -32,7 +32,7 @@ fetch(URL, {
 
       col.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-4", "col-xl-4", "col-xxl-3");
       card.classList.add("card", "mb-4", "shadow-sm", "h-100");
-      img.classList.add("card-img-top", "bd-placeholder-img");
+      img.classList.add("card-img-top", "bd-placeholder-img", "object-fit-contain");
       cardBody.classList.add("card-body", "d-flex", "flex-column", "justify-content-around");
       title.classList.add("card-title");
       text.classList.add("card-text");
@@ -41,8 +41,8 @@ fetch(URL, {
       buttonView.classList.add("btn", "btn-sm", "btn-outline-secondary");
 
       market.classList.add("g-5");
-
       img.setAttribute("src", `${smartphone.imageUrl}`);
+      img.style.height = "350px";
       card.setAttribute("style", "width: 19rem");
       title.innerText = `${smartphone.name}`;
       text.innerText = `${smartphone.description}`;
