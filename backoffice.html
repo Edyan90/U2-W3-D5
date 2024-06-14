@@ -10,10 +10,19 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        background-image: url("https://img.freepik.com/free-vector/gradient-connection-background_23-2150521683.jpg?w=1800&t=st=1718371968~exp=1718372568~hmac=14ce7fd41e28e6c0637deef54b250c32eb6e52555d3c728cb2bb874550d6352b");
+        background-size: cover;
+      }
+      nav {
+        background-color: #116988;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">EPICODE SHOP</a>
           <button
@@ -30,16 +39,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="./Home.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">List</a>
+                <a class="nav-link" href="./backoffice.html">Add Product</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -47,7 +52,8 @@
     <main class="container">
       <section class="row justify-content-center">
         <div class="col-5">
-          <h1>Backoffice</h1>
+          <h1 class="display-4 mt-5 mb-4 text-primary d-inline-block">Backoffice</h1>
+          <h5 id="subtitle" class="d-inline-block text-muted"></h5>
           <form id="searchForm">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="name" placeholder="Name" required />
@@ -70,7 +76,15 @@
               <label for="price">Price</label>
             </div>
             <button type="submit" class="btn btn-primary btn-sm" id="create">Create Product</button>
-            <button type="button" class="btn btn-secondary btn-sm" id="reset">Reset</button>
+            <button
+              type="reset"
+              class="btn btn-secondary btn-sm"
+              id="reset"
+              onclick="return confirm(`Do you want reset the form?`)"
+            >
+              Reset
+            </button>
+            <button type="button" class="btn btn-danger btn-sm d-none" id="delete">Delete</button>
           </form>
         </div>
       </section>

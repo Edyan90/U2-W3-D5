@@ -43,10 +43,15 @@ fetch(URL, {
       market.classList.add("g-5");
 
       img.setAttribute("src", `${smartphone.imageUrl}`);
-      card.setAttribute("style", "width: 18rem");
+      card.setAttribute("style", "width: 19rem");
       title.innerText = `${smartphone.name}`;
       text.innerText = `${smartphone.description}`;
-      buttonView.innerText = "View";
+      buttonView.innerText = "Edit";
+      ///rimando alla modifica de prodotto
+
+      buttonView.addEventListener("click", () => {
+        window.location.assign("./backoffice.html?productId=" + smartphone._id);
+      });
 
       small.innerText = `${smartphone.price}€`;
 
@@ -61,6 +66,10 @@ fetch(URL, {
       card.appendChild(cardBody);
       col.appendChild(card);
       market.appendChild(col);
+
+      img.addEventListener("click", () => {
+        window.location.assign("./dettaglio.html?productId=" + smartphone._id);
+      });
     });
   })
   .catch((err) => console.log(err));
