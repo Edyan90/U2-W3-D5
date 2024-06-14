@@ -2,6 +2,7 @@ const API_KEY =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZmYxMTdjMjM5YzAwMTUyZjRiNmYiLCJpYXQiOjE3MTgzNTM2ODEsImV4cCI6MTcxOTU2MzI4MX0.HxbtsHIRZzTywQNmyERSUS_shUPpyog2m1MqD67j8DA";
 
 const id = new URLSearchParams(window.location.search).get("productId");
+console.log(id);
 
 const URL = id
   ? "https://striveschool-api.herokuapp.com/api/product/" + id

@@ -26,13 +26,13 @@ window.addEventListener("DOMContentLoaded", function () {
       const h2 = document.createElement("h2");
       const price = document.createElement("p");
       const description = document.createElement("p");
-      const modifica = document.createElement("a");
+      const edit = document.createElement("a");
 
       col.className = "col text-white";
       img.className = "object-fit-cover my-3 w-50";
       price.className = "text-primary fs-3 fw-bold text-white";
       description.className = " fs-5 fw-bold";
-      modifica.className = "btn  btn-success fs-5 my-3";
+      edit.className = "btn  btn-success fs-5 my-3";
 
       img.setAttribute("style", "height=200");
       img.src = smartphone.imageUrl;
@@ -40,10 +40,10 @@ window.addEventListener("DOMContentLoaded", function () {
       h2.innerText = smartphone.brand + " " + smartphone.name;
       price.innerText = smartphone.price + " €";
       description.innerText = smartphone.description;
-      modifica.innerText = "Edit";
+      edit.innerText = "Edit";
 
-      modifica.addEventListener("click", handleEditBtnClick);
-      col.append(img, h2, price, description, modifica);
+      edit.addEventListener("click", handleEditBtnClick);
+      col.append(img, h2, price, description, edit);
       container.append(col);
     })
     .catch((err) => console.log(err));
